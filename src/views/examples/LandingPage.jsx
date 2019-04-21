@@ -72,8 +72,9 @@ class LandingPage extends React.Component {
                     SIAMES
                   </h1>
                   <p className="text-white mb-3">
-                    Intelligent system to mesaure Social Impact of your project or
-                    social enterprise
+                    Intelligent system to measure Social Impact of your project or
+                    social enterprise. <strong>This web is yet under construction and not all information
+                    are real.</strong>
                   </p>
                   <div className="btn-wrapper mb-3">
                     <p className="category text-success d-inline">
@@ -82,8 +83,7 @@ class LandingPage extends React.Component {
                     <Button
                       className="btn-link"
                       color="success"
-                      href="/register-page"
-                      onClick={e => e.preventDefault()}
+                      href="/register"
                       size="sm"
                     >
                       <i className="tim-icons icon-minimal-right" />
@@ -95,7 +95,6 @@ class LandingPage extends React.Component {
                         className="btn-icon btn-simple btn-round btn-neutral"
                         color="default"
                         href="https://github.com/siames-social"
-                        onClick={e => e.preventDefault()}
                       >
                         <i className="fab fa-github" />
                       </Button>
@@ -103,7 +102,6 @@ class LandingPage extends React.Component {
                         className="btn-icon btn-simple btn-round btn-neutral"
                         color="default"
                         href="https://github.com/siames-social"
-                        onClick={e => e.preventDefault()}
                       >
                         <i className="fas fa-book" />
                       </Button>
@@ -111,7 +109,6 @@ class LandingPage extends React.Component {
                         className="btn-icon btn-simple btn-round btn-neutral"
                         color="default"
                         href="mailto:info@siames.social"
-                        onClick={e => e.preventDefault()}
                       >
                         <i className="far fa-envelope" />
                       </Button>
@@ -226,17 +223,17 @@ class LandingPage extends React.Component {
                   <Col md="6">
                     <div className="pl-md-5">
                       <h1>
-                        Large <br />
+                        SIAMES <br />
                         Ontology
                       </h1>
                       <p>
-                        We build an ontology populated from several sources
-                        to drive the text-mining extraction and to advise a
-                        set of indicators for the new projects.
+                        We built an ontology populated from several sources
+                        to drive the text-mining extraction task and to generate a
+                        set of recommended indicators for the new projects.
                       </p>
                       <br />
                       <p>
-                        You can input an abstract of your project and SIAMES
+                        Users can input an abstract of their projects and SIAMES
                         compare it with their Cases Database to
                         output useful standardized indicators used in the most similar impact reports.
                       </p>
@@ -339,7 +336,7 @@ class LandingPage extends React.Component {
                       <div className="justify-content-center">
                         <div className="numbers">
                           <CardTitle tag="p">94%</CardTitle>
-                          <p className="card-category text-white">Preccision</p>
+                          <p className="card-category text-white">Accuracy</p>
                         </div>
                       </div>
                     </CardBody>
@@ -478,7 +475,7 @@ class LandingPage extends React.Component {
                     <CardBody>
                       <Row>
                         <Col className="text-center" md="12">
-                          <h4 className="text-uppercase">Pay us a beer</h4>
+                          <h4 className="text-uppercase">Pay a beer for the team</h4>
                           <span>Basic contributor</span>
                           <hr className="line-primary" />
                         </Col>
