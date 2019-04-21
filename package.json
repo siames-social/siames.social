@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://github.com/creativetimofficial/blk-design-system-react/issues"
   },
-  "homepage": "https://github.com/creativetimofficial/blk-design-system-react#readme",
+  "homepage": "https://sleepy-fermi-9011ce.netlify.com",
   "dependencies": {
     "chart.js": "2.7.3",
     "classnames": "2.2.6",
