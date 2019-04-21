@@ -18,18 +18,31 @@ import {
   InputGroup,
   Container,
   Row,
-  Col
+  Col, Alert
 } from "reactstrap";
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.jsx";
 import Footer from "components/Footer/Footer.jsx";
+import * as emailjs from "emailjs-com";
 
 class RegisterPage extends React.Component {
   state = {
     squares1to6: "",
-    squares7and8: ""
+    squares7and8: "",
+    name: "",
+    email: "",
+    message: "",
+    sent: false,
+    error: false,
+    disabledButton: false,
   };
+  constructor(props) {
+    super(props);
+    this.commonChange = this.commonChange.bind(this);
+    this.sendMail = this.sendMail.bind(this);
+  }
+
   componentDidMount() {
     document.body.classList.toggle("register-page");
     document.documentElement.addEventListener("mousemove", this.followCursor);
@@ -59,7 +72,36 @@ class RegisterPage extends React.Component {
         "deg)"
     });
   };
+  commonChange(event) {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  sendMail(event) {
+    event.preventDefault();
+    this.setState({disabledButton: true});
+    var template_params = {
+      "reply_to": this.state.email,
+      "from_name": "SIAMES Beta Request - " + this.state.name,
+      "to_name": "Daniel",
+      "message_html": this.state.message
+    }
+
+    var service_id = "default_service";
+    var template_id = process.env.REACT_APP_EMAILJS_TEMPLATE;
+    var user_id = process.env.REACT_APP_EMAILJS_USER_ID;
+    var result = emailjs.send(service_id, template_id, template_params, user_id)
+        .then((response) => {
+          this.setState({sent: true, error: false})
+        }, (err) => {
+          this.setState({sent: true, error: true})
+        });
+  }
   render() {
+    const sent = this.state.sent;
+    const error = this.state.error;
+    const disabledButton = this.state.disabledButton;
     return (
       <>
         <ExamplesNavbar />
@@ -67,7 +109,9 @@ class RegisterPage extends React.Component {
           <div className="page-header">
             <div className="page-header-image" />
             <div className="content">
-              <Container>
+              <Alert style={{ display: (!error && sent ? 'block' : 'none') }} color="success">Thank you! We will answer you as soon as posible</Alert>
+              <Alert style={{ display: (error && sent ? 'block' : 'none') }} color="danger">Your message colud not be sent. Please, try again or send an email to info@siames.social</Alert>
+              <Container style={{ display: (sent ? 'none' : 'block') }}>
                 <Row>
                   <Col className="offset-lg-0 offset-md-3" lg="5" md="6">
                     <div
@@ -86,7 +130,7 @@ class RegisterPage extends React.Component {
                           alt="..."
                           src={require("assets/img/square-purple-1.png")}
                         />
-                        <CardTitle tag="h4">Register</CardTitle>
+                        <CardTitle tag="h4">Request <span className="text-white"> beta access</span></CardTitle>
                       </CardHeader>
                       <CardBody>
                         <Form className="form">
@@ -109,6 +153,8 @@ class RegisterPage extends React.Component {
                               onBlur={e =>
                                 this.setState({ fullNameFocus: false })
                               }
+                              onChange={this.commonChange}
+                              name="name"
                             />
                           </InputGroup>
                           <InputGroup
@@ -126,27 +172,27 @@ class RegisterPage extends React.Component {
                               type="text"
                               onFocus={e => this.setState({ emailFocus: true })}
                               onBlur={e => this.setState({ emailFocus: false })}
+                              onChange={this.commonChange}
+                              name="email"
                             />
                           </InputGroup>
                           <InputGroup
-                            className={classnames({
-                              "input-group-focus": this.state.passwordFocus
-                            })}
+                              className={classnames({
+                                "input-group-focus": this.state.descriptionFocus
+                              })}
                           >
                             <InputGroupAddon addonType="prepend">
                               <InputGroupText>
-                                <i className="tim-icons icon-lock-circle" />
+                                <i className="tim-icons icon-align-left-2" />
                               </InputGroupText>
                             </InputGroupAddon>
                             <Input
-                              placeholder="Password"
-                              type="text"
-                              onFocus={e =>
-                                this.setState({ passwordFocus: true })
-                              }
-                              onBlur={e =>
-                                this.setState({ passwordFocus: false })
-                              }
+                                placeholder="Why you want try SIAMES?"
+                                type="textarea"
+                                onFocus={e => this.setState({ descriptionFocus: true })}
+                                onBlur={e => this.setState({ descriptionFocus: false })}
+                                onChange={this.commonChange}
+                                name="message"
                             />
                           </InputGroup>
                           <FormGroup check className="text-left">
@@ -165,8 +211,8 @@ class RegisterPage extends React.Component {
                         </Form>
                       </CardBody>
                       <CardFooter>
-                        <Button className="btn-round" color="primary" size="lg">
-                          Get Started
+                        <Button className="btn-round" color="primary" size="lg" onClick={this.sendMail} disabled={disabledButton}>
+                          Send request
                         </Button>
                       </CardFooter>
                     </Card>

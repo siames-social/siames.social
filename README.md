@@ -142,8 +142,7 @@ Blk• Design System React
         │   └── Typography.jsx
         └── examples
             ├── LandingPage.jsx
-            ├── ProfilePage.jsx
-            └── RegisterPage.jsx
+            ├── ContactPagePage.jsx         └── RegisterPage.jsx
 ```
 
 

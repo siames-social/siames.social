@@ -69,22 +69,20 @@ class LandingPage extends React.Component {
               <Row className="row-grid justify-content-between align-items-center text-left">
                 <Col lg="6" md="6">
                   <h1 className="text-white">
-                    We keep your coin <br />
-                    <span className="text-white">secured</span>
+                    SIAMES
                   </h1>
                   <p className="text-white mb-3">
-                    A wonderful serenity has taken possession of my entire soul,
-                    like these sweet mornings of spring which I enjoy with my
-                    whole heart. I am alone, and feel...
+                    Intelligent system to mesaure Social Impact of your project or
+                    social enterprise
                   </p>
                   <div className="btn-wrapper mb-3">
                     <p className="category text-success d-inline">
-                      From 9.99%/mo
+                      Request for Beta access
                     </p>
                     <Button
                       className="btn-link"
                       color="success"
-                      href="#pablo"
+                      href="/register-page"
                       onClick={e => e.preventDefault()}
                       size="sm"
                     >
@@ -96,26 +94,26 @@ class LandingPage extends React.Component {
                       <Button
                         className="btn-icon btn-simple btn-round btn-neutral"
                         color="default"
-                        href="#pablo"
+                        href="https://github.com/siames-social"
                         onClick={e => e.preventDefault()}
                       >
-                        <i className="fab fa-twitter" />
+                        <i className="fab fa-github" />
                       </Button>
                       <Button
                         className="btn-icon btn-simple btn-round btn-neutral"
                         color="default"
-                        href="#pablo"
+                        href="https://github.com/siames-social"
                         onClick={e => e.preventDefault()}
                       >
-                        <i className="fab fa-dribbble" />
+                        <i className="fas fa-book" />
                       </Button>
                       <Button
                         className="btn-icon btn-simple btn-round btn-neutral"
                         color="default"
-                        href="#pablo"
+                        href="mailto:info@siames.social"
                         onClick={e => e.preventDefault()}
                       >
-                        <i className="fab fa-facebook" />
+                        <i className="far fa-envelope" />
                       </Button>
                     </div>
                   </div>
@@ -147,14 +145,14 @@ class LandingPage extends React.Component {
                             <Row>
                               <Col md="4" xs="5">
                                 <div className="icon-big text-center icon-warning">
-                                  <i className="tim-icons icon-trophy text-warning" />
+                                  <i className="tim-icons icon-chart-pie-36 text-warning" />
                                 </div>
                               </Col>
                               <Col md="8" xs="7">
                                 <div className="numbers">
-                                  <CardTitle tag="p">3,237</CardTitle>
+                                  <CardTitle tag="p">7</CardTitle>
                                   <p />
-                                  <p className="card-category">Awards</p>
+                                  <p className="card-category">Sectors</p>
                                 </div>
                               </Col>
                             </Row>
@@ -167,14 +165,14 @@ class LandingPage extends React.Component {
                             <Row>
                               <Col md="4" xs="5">
                                 <div className="icon-big text-center icon-warning">
-                                  <i className="tim-icons icon-coins text-white" />
+                                  <i className="tim-icons icon-tag text-white" />
                                 </div>
                               </Col>
                               <Col md="8" xs="7">
                                 <div className="numbers">
-                                  <CardTitle tag="p">3,653</CardTitle>
+                                  <CardTitle tag="p">5,234</CardTitle>
                                   <p />
-                                  <p className="card-category">Commits</p>
+                                  <p className="card-category">Indicators</p>
                                 </div>
                               </Col>
                             </Row>
@@ -189,14 +187,14 @@ class LandingPage extends React.Component {
                             <Row>
                               <Col md="4" xs="5">
                                 <div className="icon-big text-center icon-warning">
-                                  <i className="tim-icons icon-gift-2 text-info" />
+                                  <i className="tim-icons icon-notes text-info" />
                                 </div>
                               </Col>
                               <Col md="8" xs="7">
                                 <div className="numbers">
                                   <CardTitle tag="p">593</CardTitle>
                                   <p />
-                                  <p className="card-category">Presents</p>
+                                  <p className="card-category">Outcomes</p>
                                 </div>
                               </Col>
                             </Row>
@@ -209,14 +207,14 @@ class LandingPage extends React.Component {
                             <Row>
                               <Col md="4" xs="5">
                                 <div className="icon-big text-center icon-warning">
-                                  <i className="tim-icons icon-credit-card text-success" />
+                                  <i className="tim-icons icon-paper text-success" />
                                 </div>
                               </Col>
                               <Col md="8" xs="7">
                                 <div className="numbers">
-                                  <CardTitle tag="p">10,783</CardTitle>
+                                  <CardTitle tag="p">204</CardTitle>
                                   <p />
-                                  <p className="card-category">Forks</p>
+                                  <p className="card-category">Reports</p>
                                 </div>
                               </Col>
                             </Row>
@@ -229,29 +227,20 @@ class LandingPage extends React.Component {
                     <div className="pl-md-5">
                       <h1>
                         Large <br />
-                        Achivements
+                        Ontology
                       </h1>
                       <p>
-                        I should be capable of drawing a single stroke at the
-                        present moment; and yet I feel that I never was a
-                        greater artist than now.
+                        We build an ontology populated from several sources
+                        to drive the text-mining extraction and to advise a
+                        set of indicators for the new projects.
                       </p>
                       <br />
                       <p>
-                        When, while the lovely valley teems with vapour around
-                        me, and the meridian sun strikes the upper surface of
-                        the impenetrable foliage of my trees, and but a few
-                        stray.
+                        You can input an abstract of your project and SIAMES
+                        compare it with their Cases Database to
+                        output useful standardized indicators used in the most similar impact reports.
                       </p>
-                      <br />
-                      <a
-                        className="font-weight-bold text-info mt-5"
-                        href="#pablo"
-                        onClick={e => e.preventDefault()}
-                      >
-                        Show all{" "}
-                        <i className="tim-icons icon-minimal-right text-info" />
-                      </a>
+
                     </div>
                   </Col>
                 </Row>
@@ -277,47 +266,52 @@ class LandingPage extends React.Component {
             <Container>
               <Row className="justify-content-center">
                 <Col lg="12">
-                  <h1 className="text-center">Your best benefit</h1>
+                  <h1 className="text-center">Why use SIAMES?</h1>
                   <Row className="row-grid justify-content-center">
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-primary">
-                          <i className="tim-icons icon-money-coins" />
+                          <i className="tim-icons icon-planet" />
                         </div>
-                        <h4 className="info-title">Low Commission</h4>
+                        <h4 className="info-title">Widely used indicators</h4>
                         <hr className="line-primary" />
                         <p>
-                          Divide details about your work into parts. Write a few
-                          lines about each one. A paragraph describing a feature
-                          will.
+                          SIAMES prioritize more used indicators. By this way,
+                          our impact measurement are almost standardized and
+                          projects managers, funders and investors can get a
+                          comparable practical report.
                         </p>
                       </div>
                     </Col>
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-warning">
-                          <i className="tim-icons icon-chart-pie-36" />
+                          <i className="tim-icons icon-user-run" />
                         </div>
-                        <h4 className="info-title">High Incomes</h4>
+                        <h4 className="info-title">Quickly</h4>
                         <hr className="line-warning" />
                         <p>
-                          Divide details about your product or agency work into
-                          parts. Write a few lines about each one. A paragraph
-                          describing feature will be a feature.
+                          You only need an abstract of your project
+                          to use SIAMES and get your set of suggested
+                          indicators to mesaure your impact at once.
+                          No more expensive and heavy consultancy for this job!
                         </p>
                       </div>
                     </Col>
                     <Col lg="3">
                       <div className="info">
                         <div className="icon icon-success">
-                          <i className="tim-icons icon-single-02" />
+                          <i className="tim-icons icon-bulb-63" />
                         </div>
-                        <h4 className="info-title">Verified People</h4>
+                        <h4 className="info-title">Free and Open Source</h4>
                         <hr className="line-success" />
                         <p>
-                          Divide details about your product or agency work into
-                          parts. Write a few lines about each one. A paragraph
-                          describing be enough.
+                          Main features of SIAMES are, and will
+                          always be, free and open source.
+                          May be you can pay in future for online
+                          tracing your impact in an open source SaaS
+                          dashboard (planned but not yet developed).
+                          <br /> We <i className="fas fa-heart" /> Open Source!
                         </p>
                       </div>
                     </Col>
@@ -344,8 +338,8 @@ class LandingPage extends React.Component {
                     <CardBody>
                       <div className="justify-content-center">
                         <div className="numbers">
-                          <CardTitle tag="p">100%</CardTitle>
-                          <p className="card-category text-white">Safe</p>
+                          <CardTitle tag="p">94%</CardTitle>
+                          <p className="card-category text-white">Preccision</p>
                         </div>
                       </div>
                     </CardBody>
@@ -354,9 +348,9 @@ class LandingPage extends React.Component {
                     <CardBody>
                       <div className="justify-content-center">
                         <div className="numbers">
-                          <CardTitle tag="p">573 K</CardTitle>
+                          <CardTitle tag="p">223</CardTitle>
                           <p className="card-category text-white">
-                            Satisfied customers
+                            Suggested indicators
                           </p>
                         </div>
                       </div>
@@ -366,8 +360,8 @@ class LandingPage extends React.Component {
                     <CardBody>
                       <div className="justify-content-center">
                         <div className="numbers">
-                          <CardTitle tag="p">10 425</CardTitle>
-                          <p className="card-category text-white">Business</p>
+                          <CardTitle tag="p">50</CardTitle>
+                          <p className="card-category text-white">Beta testers</p>
                         </div>
                       </div>
                     </CardBody>
@@ -376,11 +370,14 @@ class LandingPage extends React.Component {
                 <Col md="6">
                   <div className="px-md-5">
                     <hr className="line-success" />
-                    <h3>Awesome features</h3>
+                    <h3>Next features</h3>
                     <p>
-                      The design system comes with three pre-built pages to help
-                      you get started faster. You can change the text and images
-                      and you're good to go.
+                      Do you like SIAMES? We are planning
+                      more features to become it a full
+                      tool for manage and monitoring your social impact.
+                      SIAMES is Open Source so you can contribute to the
+                      development. You can donate money to if you want
+                      support maintenance and development.
                     </p>
                     <ul className="list-unstyled mt-5">
                       <li className="py-2">
@@ -389,7 +386,7 @@ class LandingPage extends React.Component {
                             <i className="tim-icons icon-vector" />
                           </div>
                           <div className="ml-3">
-                            <h6>Carefully crafted components</h6>
+                            <h6>Dashboard</h6>
                           </div>
                         </div>
                       </li>
@@ -399,7 +396,7 @@ class LandingPage extends React.Component {
                             <i className="tim-icons icon-tap-02" />
                           </div>
                           <div className="ml-3">
-                            <h6>Amazing page examples</h6>
+                            <h6>Report generation</h6>
                           </div>
                         </div>
                       </li>
@@ -409,7 +406,7 @@ class LandingPage extends React.Component {
                             <i className="tim-icons icon-single-02" />
                           </div>
                           <div className="ml-3">
-                            <h6>Super friendly support team</h6>
+                            <h6>Stakeholders contributions</h6>
                           </div>
                         </div>
                       </li>
@@ -436,8 +433,8 @@ class LandingPage extends React.Component {
                   <Row>
                     <Col className="text-left" sm="6">
                       <hr className="line-info" />
-                      <h5 className="card-category">Total Investments</h5>
-                      <CardTitle tag="h2">Performance</CardTitle>
+                      <h5 className="card-category">Follow our work</h5>
+                      <CardTitle tag="h2">Timeline</CardTitle>
                     </Col>
                   </Row>
                 </CardHeader>
@@ -463,8 +460,8 @@ class LandingPage extends React.Component {
                 <Col md="4">
                   <hr className="line-info" />
                   <h1>
-                    Choose the coin{" "}
-                    <span className="text-info">that fits your needs</span>
+                    Do you want{" "}
+                    <span className="text-info">become contributor?</span>
                   </h1>
                 </Col>
               </Row>
@@ -481,23 +478,29 @@ class LandingPage extends React.Component {
                     <CardBody>
                       <Row>
                         <Col className="text-center" md="12">
-                          <h4 className="text-uppercase">Light Coin</h4>
-                          <span>Plan</span>
+                          <h4 className="text-uppercase">Pay us a beer</h4>
+                          <span>Basic contributor</span>
                           <hr className="line-primary" />
                         </Col>
                       </Row>
                       <Row>
                         <ListGroup>
-                          <ListGroupItem>50 messages</ListGroupItem>
-                          <ListGroupItem>100 emails</ListGroupItem>
-                          <ListGroupItem>24/7 Support</ListGroupItem>
+                          <ListGroupItem>Symbolic 5€ donation</ListGroupItem>
+                          <ListGroupItem>Early access to new features</ListGroupItem>
+                          <ListGroupItem>Acknowledgments from the team</ListGroupItem>
                         </ListGroup>
                       </Row>
                     </CardBody>
                     <CardFooter className="text-center">
-                      <Button className="btn-simple" color="primary">
-                        Get plan
-                      </Button>
+                      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_donations" />
+                        <input type="hidden" name="business" value="J3SW5TUMQGXM8" />
+                        <input type="hidden" name="currency_code" value="EUR" />
+                        <input type="hidden" name="amount" value="5" />
+                        <Button className="btn-simple" color="primary">
+                          Donate 5€
+                        </Button>
+                      </form>
                     </CardFooter>
                   </Card>
                 </Col>
@@ -513,23 +516,30 @@ class LandingPage extends React.Component {
                     <CardBody>
                       <Row>
                         <Col className="text-center" md="12">
-                          <h4 className="text-uppercase">Dark Coin</h4>
-                          <span>Plan</span>
+                          <h4 className="text-uppercase">Hosting support</h4>
+                          <span>Contributes with hosting costs</span>
                           <hr className="line-success" />
                         </Col>
                       </Row>
                       <Row>
                         <ListGroup>
-                          <ListGroupItem>150 messages</ListGroupItem>
-                          <ListGroupItem>1000 emails</ListGroupItem>
-                          <ListGroupItem>24/7 Support</ListGroupItem>
+                          <ListGroupItem>50€ donation</ListGroupItem>
+                          <ListGroupItem>Early access to new features</ListGroupItem>
+                          <ListGroupItem>Better conditions and offers for future paid plans</ListGroupItem>
+                          <ListGroupItem>Acknowledgments from the team</ListGroupItem>
                         </ListGroup>
                       </Row>
                     </CardBody>
                     <CardFooter className="text-center">
-                      <Button className="btn-simple" color="success">
-                        Get plan
-                      </Button>
+                      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_donations" />
+                        <input type="hidden" name="business" value="J3SW5TUMQGXM8" />
+                        <input type="hidden" name="currency_code" value="EUR" />
+                        <input type="hidden" name="amount" value="50" />
+                        <Button className="btn-simple" color="primary">
+                          Donate 50€
+                        </Button>
+                      </form>
                     </CardFooter>
                   </Card>
                 </Col>
@@ -545,23 +555,31 @@ class LandingPage extends React.Component {
                     <CardBody>
                       <Row>
                         <Col className="text-center" md="12">
-                          <h4 className="text-uppercase">Bright Coin</h4>
-                          <span>Plan</span>
+                          <h4 className="text-uppercase">Gold supporter</h4>
+                          <span>Contribution for SIAMES professional launch</span>
                           <hr className="line-info" />
                         </Col>
                       </Row>
                       <Row>
                         <ListGroup>
-                          <ListGroupItem>350 messages</ListGroupItem>
-                          <ListGroupItem>10K emails</ListGroupItem>
-                          <ListGroupItem>24/7 Support</ListGroupItem>
+                          <ListGroupItem>200€ donation</ListGroupItem>
+                          <ListGroupItem>Early access to new features</ListGroupItem>
+                          <ListGroupItem>Better conditions and offers for future paid plans</ListGroupItem>
+                          <ListGroupItem>Free future paid plan for the first year</ListGroupItem>
+                          <ListGroupItem>Acknowledgments from the team</ListGroupItem>
                         </ListGroup>
                       </Row>
                     </CardBody>
                     <CardFooter className="text-center">
-                      <Button className="btn-simple" color="info">
-                        Get plan
-                      </Button>
+                      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_donations" />
+                        <input type="hidden" name="business" value="J3SW5TUMQGXM8" />
+                        <input type="hidden" name="currency_code" value="EUR" />
+                        <input type="hidden" name="amount" value="50" />
+                        <Button className="btn-simple" color="primary">
+                          Donate 200€
+                        </Button>
+                      </form>
                     </CardFooter>
                   </Card>
                 </Col>

@@ -11,22 +11,43 @@ const bigChart = {
 
     return {
       labels: [
-        "JUN",
-        "FEB",
-        "MAR",
-        "APR",
-        "MAY",
-        "JUN",
-        "JUL",
-        "AUG",
-        "SEP",
-        "OCT",
-        "NOV",
-        "DEC"
+        "SEP 2018",
+        "OCT 2018",
+        "NOV 2018",
+        "DEC 2018",
+        "ENE 2019",
+        "FEB 2019",
+        "MAR 2019",
+        "APR 2019",
+        "MAY 2019",
+        "JUN 2019",
+        "JUL 2019",
+        "AUG 2019",
+        "SEP 2019",
+        "OCT 2019",
+        "NOV 2019",
+        "DEC 2019",
       ],
       datasets: [
         {
-          label: "Data",
+          labels: [
+            "Begining the project",
+            "Documentation and research",
+            "Documentation and research",
+            "Documentation and research",
+            "Documentation and research",
+            "Documentation and research",
+            "Development",
+            "Development",
+            "Write report",
+            "Open beta access",
+            "Get feedbakc and improve",
+            "Get feedbakc and improve",
+            "Work on dashboard",
+            "Work on dashboard",
+            "Work on dashboard",
+            "Launch beta dashboard access",
+          ],
           fill: true,
           backgroundColor: gradientFill,
           borderColor: "#1d8cf8",
@@ -41,7 +62,7 @@ const bigChart = {
           pointHoverRadius: 4,
           pointHoverBorderWidth: 15,
           pointRadius: 4,
-          data: [80, 160, 200, 160, 250, 280, 220, 190, 200, 250, 290, 320]
+          data: [10, 20, 30,40, 50, 60, 100, 140, 180, 250, 260, 270, 290, 310, 330, 350, 400]
         }
       ]
     };
@@ -60,7 +81,14 @@ const bigChart = {
       xPadding: 12,
       mode: "nearest",
       intersect: 0,
-      position: "nearest"
+      position: "nearest",
+      callbacks: {
+        label: function (item, data) {
+          console.log(item)
+          var label = data.datasets[item.datasetIndex].labels[item.index]
+          return label;
+        }
+      },
     },
     responsive: true,
     scales: {

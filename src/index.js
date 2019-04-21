@@ -9,7 +9,7 @@ import "assets/demo/demo.css";
 import Index from "views/Index.jsx";
 import LandingPage from "views/examples/LandingPage.jsx";
 import RegisterPage from "views/examples/RegisterPage.jsx";
-import ProfilePage from "views/examples/ProfilePage.jsx";
+import ContactPage from "views/examples/ContactPage.jsx";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,14 +20,14 @@ ReactDOM.render(
         render={props => <LandingPage {...props} />}
       />
       <Route
-        path="/register-page"
+        path="/register"
         render={props => <RegisterPage {...props} />}
       />
       <Route
-        path="/profile-page"
-        render={props => <ProfilePage {...props} />}
+        path="/contact"
+        render={props => <ContactPage {...props} />}
       />
-      <Redirect from="/" to="/components" />
+      <Redirect from="/" to="/landing-page" />
     </Switch>
   </BrowserRouter>,
   document.getElementById("root")
