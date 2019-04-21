@@ -1,5 +1,4 @@
 import React from "react";
-import classnames from "classnames";
 // javascript plugin used to create scrollbars on windows
 import PerfectScrollbar from "perfect-scrollbar";
 // reactstrap components
@@ -8,22 +7,13 @@ import {
   Card,
   CardHeader,
   CardBody,
-  Label,
   FormGroup,
   Form,
   Input,
-  FormText,
-  NavItem,
-  NavLink,
-  Nav,
-  Table,
-  TabContent,
-  TabPane,
   Container,
   Row,
   Col,
   UncontrolledTooltip,
-  UncontrolledCarousel,
   Alert,
 } from "reactstrap";
 
@@ -31,24 +21,6 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.jsx";
 import Footer from "components/Footer/Footer.jsx";
 import * as emailjs from 'emailjs-com';
-
-const carouselItems = [
-  {
-    src: require("assets/img/denys.jpg"),
-    altText: "Slide 1",
-    caption: "Big City Life, United States"
-  },
-  {
-    src: require("assets/img/fabien-bazanegue.jpg"),
-    altText: "Slide 2",
-    caption: "Somewhere Beyond, United States"
-  },
-  {
-    src: require("assets/img/mark-finn.jpg"),
-    altText: "Slide 3",
-    caption: "Stocks, United States"
-  }
-];
 
 let ps = null;
 
@@ -112,7 +84,7 @@ class ContactPage extends React.Component {
       var service_id = "default_service";
       var template_id = process.env.REACT_APP_EMAILJS_TEMPLATE;
       var user_id = process.env.REACT_APP_EMAILJS_USER_ID;
-      var result = emailjs.send(service_id, template_id, template_params, user_id)
+      emailjs.send(service_id, template_id, template_params, user_id)
           .then((response) => {
               this.setState({sent: true, error: false})
           }, (err) => {

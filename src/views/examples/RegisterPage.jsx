@@ -91,7 +91,7 @@ class RegisterPage extends React.Component {
     var service_id = "default_service";
     var template_id = process.env.REACT_APP_EMAILJS_TEMPLATE;
     var user_id = process.env.REACT_APP_EMAILJS_USER_ID;
-    var result = emailjs.send(service_id, template_id, template_params, user_id)
+    emailjs.send(service_id, template_id, template_params, user_id)
         .then((response) => {
           this.setState({sent: true, error: false})
         }, (err) => {
